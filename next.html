@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title>Luis Oenrique</title>
+	
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="css/styles.min.css">
+	</head>
+<body>
+	<section class="h-100 section--new"> 
+		<div class="h-100 background1">
+			
+		<div class="row h-100 w-100">
+			<div class="col-4 image">
+				<a href="#" class="relat">
+					<img class="w-100 imager" src="img/heart.png" alt="">
+					<div class="title">Прости, меня родная…</div>
+				</a>
+			</div>
+			<div class="col-4 image2">
+				<a href="#" class="relat">
+					<img class="w-100 imager2" src="img/heart.png" alt="">
+					<div class="title2">Я тебя очень сильно люблю!</div>
+				</a>
+			</div>
+			<div class="col-4 image3">
+				<a href="#" class="relat">
+					<img class="w-100 imager3" src="img/heart.png" alt="">
+					<div class="title3">14 февраля, это наш с тобою день…</div>
+				</a>
+			</div>
+			<div class="container good" style="display: none;" id="good">
+				<div class="row">
+					<div class="col-4 test">
+						<img class="w-100" src="img/1.jpg">
+					</div>
+					<div class="col-4 test">
+						<img class="w-100" src="img/3.jpg">
+					</div>
+					<div class="col-4 test">
+						<img class="w-100" src="img/2.jpg">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		</div>
+		
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		$('.image').click(function() {
+		  		// $('.imager').fadeOut(400);
+		  		$('.title').addClass('title1');
+	  		});
+		$('.image2').click(function() {
+		  		// $('.imager2').fadeOut(400);
+		  		$('.title2').addClass('title1');
+	  		});
+		$('.image3').click(function() {
+		  		// $('.imager3').fadeOut(400);
+		  		$('.title3').addClass('title1');
+	  		});
+		var image1 = $('.title');
+		var image2 = $('.title2');
+		var image3 = $('.title3');
+
+		if ($('img').hasClass('title1')){
+			alert("Hello");
+		}
+
+		$(image2).hover(function() {
+   			 if ( image1.hasClass("title1") && image2.hasClass("title1") && image3.hasClass("title1")) {
+ 				$('#good').fadeIn(2000);
+				$('.background1').addClass('background2');
+				$('.imager').fadeOut(400);
+				$('.imager2').fadeOut(400);
+				$('.imager3').fadeOut(400);
+   			 }
+ 
+			});
+	</script>
+
+</body>
+</html>
